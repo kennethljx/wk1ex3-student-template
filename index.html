@@ -5,6 +5,15 @@
     <title>Demo: Get Started Debugging JavaScript with Chrome DevTools</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
+  <script>
+    function addValues(num1, num2) {
+      if (!Number.isInteger(parseInt(num1)) || !Number.isInteger(parseInt(num2))) {
+        console.log("Please enter numbers only");
+      } else {
+        console.log(parseInt(num1) + parseInt(num2));
+      }
+    }
+  </script>
   <body>
     <!--
       Your task is to complete the JavaScript for a simple addition program. 
@@ -30,9 +39,9 @@
       -->
     <h1>Demo: Get Started Debugging JavaScript with Chrome DevTools</h1>
     <label for="num1">Number 1</label>
-    <input type="number" placeholder="Number 1" id="num1">
+    <input placeholder="Number 1" id="num1">
     <label for="num2">Number 2</label>
-    <input type="number" placeholder="Number 2" id="num2">
-    <button onclick="console.log(parseInt(document.getElementById('num1').value) + parseInt(document.getElementById('num2').value))">Add Number 1 and Number 2</button>
+    <input placeholder="Number 2" id="num2">
+    <button onclick="addValues(document.getElementById('num1').value, document.getElementById('num2').value)">Add Number 1 and Number 2</button>
   </body>
 </html>
